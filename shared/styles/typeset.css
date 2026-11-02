@@ -1,0 +1,144 @@
+@layer components {
+     .typeset {
+          --typeset-size: 1em;
+          --typeset-leading: 1.75;
+          --typeset-flow: 1.25em;
+     }
+
+     .typeset :where(h1) {
+          font-size: calc(var(--typeset-size) * 2.25);
+          line-height: calc(var(--typeset-leading) * 0.65);
+          margin-block: calc(var(--typeset-flow) * 1.5) var(--typeset-flow);
+          font-weight: 700;
+          letter-spacing: -0.02em;
+     }
+
+     .typeset :where(h2) {
+          font-size: calc(var(--typeset-size) * 1.75);
+          line-height: calc(var(--typeset-leading) * 0.7);
+          margin-block: calc(var(--typeset-flow) * 1.25) calc(var(--typeset-flow) * 0.75);
+          font-weight: 650;
+          letter-spacing: -0.015em;
+     }
+
+     .typeset :where(h3) {
+          font-size: calc(var(--typeset-size) * 1.4);
+          line-height: calc(var(--typeset-leading) * 0.75);
+          margin-block: var(--typeset-flow) calc(var(--typeset-flow) * 0.5);
+          font-weight: 600;
+     }
+
+     .typeset :where(h4) {
+          font-size: calc(var(--typeset-size) * 1.2);
+          line-height: calc(var(--typeset-leading) * 0.85);
+          margin-block: var(--typeset-flow) calc(var(--typeset-flow) * 0.5);
+          font-weight: 600;
+     }
+
+     .typeset :where(h5, h6) {
+          font-size: calc(var(--typeset-size) * 1.05);
+          line-height: var(--typeset-leading);
+          margin-block: var(--typeset-flow) calc(var(--typeset-flow) * 0.5);
+          font-weight: 600;
+     }
+
+     .typeset :where(p) {
+          font-size: var(--typeset-size);
+          line-height: var(--typeset-leading);
+          margin-block: 0 var(--typeset-flow);
+     }
+
+     .typeset :where(p):last-child {
+          margin-block-end: 0;
+     }
+
+     .typeset :where(ul, ol) {
+          font-size: var(--typeset-size);
+          line-height: var(--typeset-leading);
+          margin-block: 0 var(--typeset-flow);
+          padding-inline-start: 1.5em;
+     }
+
+     .typeset :where(li) {
+          margin-block: calc(var(--typeset-flow) * 0.25);
+     }
+
+     .typeset :where(li)::marker {
+          color: var(--muted-foreground, currentColor);
+     }
+
+     .typeset :where(blockquote) {
+          font-size: var(--typeset-size);
+          line-height: calc(var(--typeset-leading) * 1.05);
+          margin-block: var(--typeset-flow);
+          padding-inline-start: var(--typeset-flow);
+          border-inline-start: 2px solid var(--border, currentColor);
+          color: var(--muted-foreground, inherit);
+     }
+
+     .typeset :where(code):not(pre code) {
+          font-size: calc(var(--typeset-size) * 0.875);
+          font-family: var(--font-mono, ui-monospace, monospace);
+          padding: 0.15em 0.35em;
+          border-radius: 0.25em;
+          background: var(--muted, rgba(0, 0, 0, 0.06));
+     }
+
+     .typeset :where(pre) {
+          font-size: calc(var(--typeset-size) * 0.875);
+          line-height: calc(var(--typeset-leading) * 0.9);
+          margin-block: var(--typeset-flow);
+          padding: calc(var(--typeset-flow) * 0.75);
+          overflow-x: auto;
+          border-radius: var(--radius, 0.5rem);
+          background: var(--muted, rgba(0, 0, 0, 0.06));
+     }
+
+     .typeset :where(pre code) {
+          font-size: inherit;
+          line-height: inherit;
+          padding: 0;
+          background: none;
+     }
+
+     .typeset :where(table) {
+          font-size: var(--typeset-size);
+          line-height: calc(var(--typeset-leading) * 0.85);
+          margin-block: var(--typeset-flow);
+          width: 100%;
+          border-collapse: collapse;
+     }
+
+     .typeset :where(th, td) {
+          padding: calc(var(--typeset-flow) * 0.4) calc(var(--typeset-flow) * 0.6);
+          border-block-end: 1px solid var(--border, currentColor);
+     }
+
+     .typeset :where(th) {
+          font-weight: 600;
+          text-align: start;
+     }
+
+     .typeset :where(hr) {
+          margin-block: calc(var(--typeset-flow) * 2);
+          border: 0;
+          border-block-start: 1px solid var(--border, currentColor);
+     }
+
+     .typeset :where(img, figure) {
+          margin-block: var(--typeset-flow);
+          max-width: 100%;
+     }
+
+     .typeset :where(figcaption) {
+          font-size: calc(var(--typeset-size) * 0.875);
+          line-height: var(--typeset-leading);
+          color: var(--muted-foreground, inherit);
+     }
+
+     .typeset :where(a) {
+          color: var(--primary, inherit);
+          text-decoration: underline;
+          text-underline-offset: 0.2em;
+     }
+}

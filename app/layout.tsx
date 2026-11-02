@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
@@ -16,9 +17,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 	return (
 		<html
 			lang="fa"
-			className={`${vazirmatn.variable} h-full antialiased`}
+			dir="rtl"
+			className={cn(
+				"h-full",
+				"antialiased",
+				vazirmatn.variable,
+				"font-sans",
+			)}
 		>
-			<body className="min-h-full flex flex-col">{children}</body>
+			<body className="min-h-full flex flex-col p-4 border border-orange-500">
+				{children}
+			</body>
 		</html>
 	);
 }

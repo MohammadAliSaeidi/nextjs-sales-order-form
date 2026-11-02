@@ -1,0 +1,19 @@
+.page-title {
+     font-size: larger;
+     font-weight: 600;
+}
+
+.page-description {
+     font-size: medium;
+     color: var(--muted-foreground)
+}
+
+.page-title-container {
+     margin-bottom: calc(var(--spacing) * 6)
+}
+
+@media (width <=40rem) {
+     .page-title {
+          font-size: x-large;
+     }
+}
