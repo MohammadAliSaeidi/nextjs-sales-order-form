@@ -23,10 +23,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 				"antialiased",
 				vazirmatn.variable,
 				"font-sans",
-				"typeset",
 			)}
 		>
-			<body className="min-h-full flex flex-col">{children}</body>
+			<body className="min-h-full flex flex-col p-4 border border-orange-500">
+				{children}
+			</body>
 		</html>
 	);
 }
